@@ -1,0 +1,7 @@
+<h1>Home/Front page</h1>
+
+<p *ngIf="user"> Logged in ass {{user.displayName}}</p>
+
+<button *ngIf="!user" (click)="register()" >Register</button>
+<button *ngIf="user" (click)="logout()">Logout</button>
+<button *ngIf="!user" (click)="login()">Login</button>

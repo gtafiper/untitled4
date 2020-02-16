@@ -1,0 +1,50 @@
+<div >
+  <div>
+    <h4>User Registration</h4>
+  </div>
+
+  <div >
+    <div *ngIf="authError">
+      <div>
+        {{ authError?.message }}
+      </div>
+    </div>
+    <form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
+      <div>
+        <div class="container">
+          <label for="firstName">First name</label>
+          <input ngModel #firstname ="ngModel" name="firstName" type="text" class="form-control" id="firstName">
+          </div>
+        <div class="container">
+          <label for="lastName">Last name</label>
+          <input ngModel #lastname="ngModel" name="lastName" type="text" class="form-control" id="lastName" value="">
+        </div>
+      </div>
+
+        <div class="container">
+          <label>Email</label>
+          <input ngModel #email="ngModel" name="email" type="email" class="form-control">
+        </div>
+
+      <div>
+        <div>
+          <div class="container">
+            <label>Password</label>
+            <input ngModel #password="ngModel" name="password" type="password" class="form-control">
+          </div>
+        </div>
+        <div>
+          <div class="container">
+            <label>Confirm Password</label>
+            <input name="password" type="password" class="form-control">
+          </div>
+        </div>
+        <div>
+          <div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
