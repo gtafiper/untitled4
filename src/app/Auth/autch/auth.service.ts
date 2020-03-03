@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-import { ThrowStmt } from '@angular/compiler';
 import { BehaviorSubject } from 'rxjs';
 import {auth} from 'firebase';
 
@@ -29,10 +28,13 @@ export class AuthService {
   login( email: string, password: string) {
     this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .catch(error => {
+        console.log(error);
         this.eventAuthError.next(error);
       })
+
       .then(userCredential => {
         if (userCredential) {
+          console.log(userCredential)
           this.router.navigate(['/home']);
         }
       });

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {AuthService} from '../autch/auth.service';
+import {AuthService} from '../Auth/autch/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -29,6 +29,10 @@ export class HomeComponent implements OnInit {user: firebase.User;
 
   register() {
     this.router.navigate(['/signUp']);
+  }
+
+  products() {
+    this.router.navigate(['/products']);
   }
 
 }

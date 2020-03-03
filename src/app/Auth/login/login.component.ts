@@ -26,8 +26,6 @@ export class LoginComponent implements OnInit {
     this.auth.login(frm.value.email, frm.value.password);
   }
 
-  logiGoogle(){
 
-  }
 
 }

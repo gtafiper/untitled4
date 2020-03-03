@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {_MatMenuDirectivesModule, MatFormFieldModule, MatMenuModule, MatToolbarModule} from '@angular/material';
 import {AngularFireModule} from '@angular/fire';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './Auth/login/login.component';
 
-import { SignupComponent } from './signup/signup.component';
+import { SignupComponent } from './Auth/signup/signup.component';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {firebaseConfig} from '../environments/info';
