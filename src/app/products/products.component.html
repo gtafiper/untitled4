@@ -1,6 +1,53 @@
-<ul>
-  <li *ngFor=" let product of Products$ | async">
-    {{product.name}} Price {{product.price}} Dkk
-  </li>
+<div >
+  <mat-icon (click)="goToHome()">home</mat-icon>
+  <app-add-produckt class="mat-background-primary"></app-add-produckt>
+<div>
+  <ul *ngFor=" let product of Products$ | async">
+  <li  class="mat-card" >
+    <mat-card-content *ngIf="!editState">
+      {{product.name}} price: {{product.price}},-
+    </mat-card-content>
+    <mat-icon *ngIf="editState" (click)="clearState()" class="v-align-right">keyboard_arrow_up</mat-icon>
+    <mat-icon *ngIf="!editState" (click)="editItem($event, product)" class="v-align-right">edit</mat-icon>
 
-</ul>
+    <div *ngIf="itemToEdit && itemToEdit.id == product.id">
+      <form (ngSubmit)="updateProdukt(product)">
+        <div class="row">
+          <div>
+            <label>Name</label><br>
+            <input type="text" placeholder="Add Name" [(ngModel)]="product.name" name="name">
+
+          </div>
+          <br>
+          <div>
+            <label>Price</label><br>
+            <input type="text" placeholder="Add Price" [(ngModel)]="product.price" name="price">
+
+          </div>
+          <br>
+          <div>
+            <label>Description</label><br>
+            <input type="text" placeholder="Add Description" [(ngModel)]="product.description" name="description">
+
+          </div>
+          <br>
+          <div>
+            <label>Url</label><br>
+            <input type="text" placeholder="Add Url" [(ngModel)]="product.url" name="url">
+
+          </div>
+          <br>
+          <input type="submit" value="Update Product" class="mat-button-toggle-appearance-standard">
+          <button (click)="deleteItem($event, product)"  class="deleteBt">Delete Product</button>
+        </div>
+        <br>
+      </form>
+    </div>
+  </li>
+  </ul>
+
+
+</div>
+  </div>
+
+

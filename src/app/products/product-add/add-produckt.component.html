@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-content">
+    <span class="mat-card-title">Add Product</span>
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        <div>
+          <label>Name</label><br>
+          <input type="text" placeholder="Add Name" [(ngModel)]="product.name" name="name">
+
+        </div>
+        <br>
+        <div>
+          <label>Price</label><br>
+          <input type="text" placeholder="Add Price" [(ngModel)]="product.price" name="price">
+
+        </div>
+        <br>
+        <div>
+          <label>Description</label><br>
+          <input type="text" placeholder="Add Description" [(ngModel)]="product.description" name="description">
+
+        </div>
+        <br>
+        <div>
+          <label>Url</label><br>
+          <input type="text" placeholder="Add Url" [(ngModel)]="product.url" name="url">
+
+        </div>
+        <br>
+        <input type="submit" value="submit" class="mat-button-toggle-appearance-standard">
+      </div>
+      <br>
+
+    </form>
+
+
+
+  </div>
+
+
+</div>

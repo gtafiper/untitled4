@@ -1,0 +1,43 @@
+.grid1{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 10px;
+  alignment: left;
+
+}
+
+.grid2{
+  display: grid;
+  grid-template-columns: max-content;
+  alignment: left;
+  grid-template-rows: auto;
+
+}
+
+.mat-card{
+  font-size: medium;
+  background-color: white;
+  border-color: black;
+  border-radius: 10px;
+  border-style: solid;
+  color: black;
+
+
+}
+
+.v-align-right {
+  margin-left: 97%;
+  font-size: medium;
+
+
+}
+
+.collaps {
+  margin-left: 97%;
+  font-size: large;
+
+}
+
+.deleteBt{
+  color: red;
+}
