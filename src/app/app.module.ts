@@ -14,6 +14,8 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {firebaseConfig} from '../environments/info';
 import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
+import { DeleteUserComponent } from './Users/delete-user/delete-user.component';
+import { UserCrudComponent } from './Users/user-crud/user-crud.component';
 
 
 
@@ -25,6 +27,8 @@ import {FormsModule} from '@angular/forms';
     LoginComponent,
     SignupComponent,
     HomeComponent,
+    DeleteUserComponent,
+    UserCrudComponent,
   ],
   imports: [
     BrowserModule,
