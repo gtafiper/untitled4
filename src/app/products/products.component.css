@@ -26,14 +26,14 @@
 }
 
 .v-align-right {
-  margin-left: 97%;
+  margin-left: 98%;
   font-size: medium;
 
 
 }
 
 .collaps {
-  margin-left: 97%;
+  margin-left: 60%;
   font-size: large;
 
 }
@@ -41,3 +41,8 @@
 .deleteBt{
   color: red;
 }
+
+.margin_left {
+  margin-left: 2%;
+}
+

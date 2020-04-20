@@ -1,4 +1,4 @@
-<div>
+<div class="margin_left">
   <mat-icon (click)="goToHome()">home</mat-icon>
   <app-add-produckt class="mat-background-primary"></app-add-produckt>
   <div>
@@ -7,7 +7,7 @@
         <div style="display: flex; flex-direction: column; align-content: end">
           <mat-card-content *ngIf="!editState">
             {{product.name}} price: {{product.price}},-
-            <mat-icon *ngIf="!editState" (click)="editItem($event, product)" style="flex: 1;">edit</mat-icon>
+            <mat-icon class="v-align-right" *ngIf="!editState" (click)="editItem($event, product)" style="flex: 1;">edit</mat-icon>
 
           </mat-card-content>
         </div>
